@@ -30,7 +30,7 @@ SELECT id_stasiun, nama_stasiun, lokasi_tujuan
 FROM stasiun;
 SELECT * FROM StasiunInfoView;
 
-CREATE VIEW InfoKeretaView AS`jadwal_kereta`
+CREATE VIEW InfoKeretaView AS
 SELECT id_kereta, nama_kereta, jenis_kereta, kapasitas
 FROM kereta;
 SELECT * FROM InfoKeretaView;

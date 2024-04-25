@@ -9,8 +9,7 @@ BEGIN
  WHERE id = id_kereta;
 END//
 
-CALL NamaKereta(1,'Senja Utama'); 
-
+CALL NamaKereta(1,'Argo Bromo Anggrek'); 
 
 -- Parameter OUT --
 DELIMITER //
@@ -23,7 +22,7 @@ BEGIN
   WHERE id = id_tiket;
 END//
 
-CALL GetStokTiket(@total);
+CALL GetStokTiket(1, @total);
 SELECT @total AS total_tiket;
 
 
@@ -47,8 +46,8 @@ BEGIN
     SET KapasitasBaru = KapasitasLama;
 END //
 
-SET @kereta_id := 1; 
-SET @KapasitasBaru := 230; 
+SET @kereta_id = 1; 
+SET @KapasitasBaru = 230; 
 CALL KapasitasKeretaBaru(@kereta_id, @KapasitasBaru);
 SELECT @kereta_id, @KapasitasBaru;
 SELECT * FROM kereta;
@@ -66,7 +65,7 @@ BEGIN
   VALUES (id_stasiun, ns, lt);
 END //
 
-CALL tambah_stasiun(22,"Stasiun Bogor","Bogor");
+CALL tambah_stasiun(21,"Stasiun Bogor","Bogor");
 SELECT * FROM stasiun;
 
 
